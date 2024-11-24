@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Place - Utah</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <!-- Header Section with Hero Image -->
+    <header>
+        <h1>Welcome to Utah!</h1>
+        <picture>
+            <source srcset="images/utah1.webp" media="(min-width: 768px)">
+            <img src="images/utah1.webp" alt="Utah, USA">
+        </picture>
+    </header>
+    <section id="data">
+        <h3>Data</h3>
+        <p>Area:84,899 mi²</p>
+        <p>Population: 3.418 million</p>
+        <p>Capital: Salt Lake City</p>
+        <p>Languages: English</p>
+        <p>Currency: USD</p>
+        <p>Time Zone: Mountain Standard Time </p>
+        <p>Calling Code: +1 </p>
+        <p>Internet TLD: .gov </p>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather">
+        <h2>Weather</h2>
+        <p>Temperature: <span id="temp">15°C</span></p>
+        <p>Wind Speed: <span id="wind-speed">5 km/h</span></p>
+        <p>Windchill: <span id="windchill">N/A</span></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Maria Jose Arevalo - Utah.</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Display current year and last modified date in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Static weather data
+        const temperature = 15; // Celsius
+        const windSpeed = 5; // km/h
+
+        // Calculate Windchill
+        function calculateWindChill(temp, windSpeed) {
+            if (temp <= 10 && windSpeed > 4.8) {
+                return (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
+            }
+            return 'N/A';
+        }
+
+        // Display Windchill
+        document.getElementById('windchill').textContent = calculateWindChill(temperature, windSpeed);
+    </script>
+</body>
+</html>
