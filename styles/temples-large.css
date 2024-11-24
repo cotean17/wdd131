@@ -1,0 +1,21 @@
+/* Apply larger screen styles */
+@media (min-width: 1024px) {
+    main {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    #temple-gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+/* Example in temples.css (Mobile-first) */
+@media (min-width: 768px) {
+    #temple-gallery {
+      grid-template-columns: repeat(3, 1fr); /* Changes layout to 3 columns for larger screens */
+    }
+  
+    #nav-links {
+      display: block; /* Ensures the navigation is displayed on larger screens */
+    }
+  }  
