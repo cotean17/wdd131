@@ -10,3 +10,11 @@ const navLinks = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+// Set current year
+const yearSpan = document.getElementById('year');
+yearSpan.textContent = new Date().getFullYear();
+
+// Set last modified date
+const lastModifiedSpan = document.getElementById('last-modified');
+lastModifiedSpan.textContent = document.lastModified;
+
