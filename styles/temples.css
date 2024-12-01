@@ -3,13 +3,12 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6; /* Improves readability */
-  color: #1C2833; /* Dark Blue-Gray */
-  background-color: #FDFEFE; /* Soft White Background */
+  background-color: #f9f9f9; /* Subtle background */
+  color: #333;
 }
 
 header {
-  background-color: #2E86C1; /* Bright Blue */
+  background-color: #357a38; /* Darker green for better contrast */
   color: white;
   padding: 1rem;
   text-align: center;
@@ -19,47 +18,35 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  position: relative;
 }
-nav a {
-  text-decoration: none;
-  color: #007BFF; /* Default link color */
-  padding: 0.5rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #0056b3; /* Hover color */
-}
-
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: none; /* Initially hidden for mobile */
-  flex-direction: column;
-  margin: 0;
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stacked links for mobile */
+  background-color: #357a38; /* Match header */
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 1rem;
 }
 
 nav ul.open {
-  display: flex; /* Show when toggled */
+  display: flex;
 }
 
 nav ul li {
-  margin: 0.5rem 0; /* Space between items in mobile view */
+  margin: 0.5rem 0;
 }
 
 nav ul li a {
-  color: white; /* White links */
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: color 0.3s; /* Smooth color change on hover */
 }
 
 nav ul li a:hover {
-  color: #F4D03F; /* Golden Yellow on Hover */
+  text-decoration: underline;
+  color: #f0c419; /* Accent color */
 }
 
 #hamburger {
@@ -70,21 +57,7 @@ nav ul li a:hover {
   color: white;
   cursor: pointer;
 }
-#hamburger {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  #hamburger {
-    display: block;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-}
-
-/* Main content styling */
 main {
   padding: 1rem;
   text-align: center;
@@ -92,69 +65,23 @@ main {
 
 #temple-gallery {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* Always have 3 columns */
+  gap: 1.5rem; /* Add space between items */
 }
 
 figure {
-  text-align: center;
   margin: 0;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Adds a slight curve for design aesthetics */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visuals */
+  border-radius: 8px;
 }
 
-figcaption {
-  margin-top: 0.5rem;
-  font-weight: bold;
-  color: #2E86C1; /* Bright Blue */
-}
-
-/* Footer */
 footer {
-  background-color: #2E86C1; /* Bright Blue */
+  background-color: #357a38; /* Match header */
   color: white;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
-}
-
-footer span {
-  font-weight: bold;
-}
-
-/* Add a media query for larger screens */
-@media (min-width: 768px) {
-  nav ul {
-    display: flex; /* Show menu inline in larger views */
-    flex-direction: row;
-  }
-
-  nav ul li {
-    margin: 0 10px; /* Inline spacing for larger screens */
-  }
-
-  #nav-links {
-    display: none; /* Initially hidden in mobile view */
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-  }
-  
-  #nav-links.open {
-    display: flex; /* Show when toggled */
-  }
-  
-
-  #hamburger {
-    display: none; /* Hide hamburger menu in larger screens */
-  }
-
-  #temple-gallery {
-    grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
-  }
 }
