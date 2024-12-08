@@ -1,0 +1,87 @@
+/* Basic styles for mobile */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Subtle background */
+  color: #333;
+}
+
+header {
+  background-color: #357a38; /* Darker green for better contrast */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav ul {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stacked links for mobile */
+  background-color: #357a38; /* Match header */
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 1rem;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0.5rem 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #f0c419; /* Accent color */
+}
+
+#hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+#temple-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always have 3 columns */
+  gap: 1.5rem; /* Add space between items */
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #357a38; /* Match header */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
