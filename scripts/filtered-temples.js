@@ -5,6 +5,7 @@ document.getElementById('last-modified').textContent = document.lastModified;
 // Handle the hamburger menu toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+
 // Function to display temples
 function displayTemples(filteredTemples) {
   const container = document.getElementById('temple-container');
@@ -148,7 +149,7 @@ const temples = [
     dedicated: "1981, May, 30",
     area: 20831,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/santiago-chile-temple/santiago-chile-temple-7572.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/santiago-chile-temple/santiago-chile-temple-7571.jpg"
   },
   {
     templeName: "Concepción Chile Temple",
