@@ -78,7 +78,7 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/santiago-chile-temple/santiago-chile-temple-7571.jpg"
       },
       {
-        templeName: "Concepción Chile Temple",
+        templeName: "Concepcion Chile Temple",
         location: "Concepción, Chile",
         dedicated: "2018, October, 28",
         area: 23095,
