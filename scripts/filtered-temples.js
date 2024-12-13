@@ -70,28 +70,28 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-      templeName: "Santiago Chile Temple",
-      location: "Santiago, Chile",
-      dedicated: "1981, May, 30",
-      area: 20831,
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/santiago-chile-temple/santiago-chile-temple-7571.jpg"
-    },
-    {
-      empleName: "Concepción Chile Temple",
-      location: "Concepción, Chile",
-      dedicated: "2018, October, 28",
-      area: 23095,
-      imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/concepcion-chile-temple/concepcion-chile-temple-1199.jpg"
-    },
-    {
-      templeName: "Antofagasta Chile",
-      location: "Antofagasta, Chile",
-      dedicated: "2020, November, 27",
-      area: 23000,
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/antofagasta-chile-temple/antofagasta-chile-temple-48608.jpg"
+        templeName: "Santiago Chile Temple",
+        location: "Santiago, Chile",
+        dedicated: "1981, May, 30",
+        area: 20831,
+        imageUrl:
+        "https://churchofjesuschristtemples.org/assets/img/temples/santiago-chile-temple/santiago-chile-temple-7571.jpg"
+      },
+      {
+        TempleName: "Concepción Chile Temple",
+        location: "Concepción, Chile",
+        dedicated: "2018, October, 28",
+        area: 23095,
+        imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/concepcion-chile-temple/concepcion-chile-temple-1199.jpg"
+      },
+      {
+        templeName: "Antofagasta Chile",
+        location: "Antofagasta, Chile",
+        dedicated: "2020, November, 27",
+        area: 23000,
+        imageUrl:
+        "https://churchofjesuschristtemples.org/assets/img/temples/antofagasta-chile-temple/antofagasta-chile-temple-48608.jpg"
     },
     
   ];
@@ -138,7 +138,7 @@ function filterTitle (temples, filter) {
             titleElement.innerHTML = `Temples smaller than 10,000 sq ft - (${temples.length})`
             break
         default:
-            titleElement.innerHTML = ` Temples - (${temples.length})`
+            titleElement.innerHTML = `All Temples - (${temples.length})`
     }
 }
 
@@ -185,3 +185,4 @@ smallNavBtn.addEventListener('click', function() {
     const smallTemples = temples.filter((temple) => temple.area < 10000 );
     displayTemples(smallTemples, 'smallFilter')
 });
+

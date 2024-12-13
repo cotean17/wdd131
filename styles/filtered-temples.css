@@ -1,103 +1,102 @@
 * {
-    --primary-color: #f4f4f9;
-    --secondary-color: #a78b6d;
-    --primary-background:#2c3e50;
-    --card-background: #eae7dc; /* Light stone for cards */
-    --card-border: #c0b283; 
-  }
-  body {
+    --primary-color: #977958;
+    --secondary-color: #5c462d;
+
+    --primary-background:#d4bc9f;
+}
+body {
     max-width: 960px;
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
-  }
-  footer, header {
-    background-color: #a78b6d;
+}
+footer, header {
+    background-color: #d4bc9f;
     padding: 0.5rem;
-    color: var(--primary-color);
-  }
-  header {
+    color: #f4f4f9;
+}
+header {
     display: grid;
     grid-template-columns: 3fr 1fr;
     justify-items: center;
     align-items: center;
-  }
-  footer {
+}
+footer {
     padding: 1rem;
     text-align: center;
     font-size: 1.1rem;
-  }
-  h1, h2, h3 {
+}
+h1, h2, h3 {
     margin: 4px 1rem;
-  }
-  nav {
+}
+nav {
     display: none;
     grid-gap: 10px;
     font-size: 1.2rem;
     grid-column: 1 / span 2;
     text-align: center;
     width: 90%;
-  }
-  nav a {
-    color: #eae7dc;
+}
+nav a {
+    color: var(--primary-color);
     text-decoration: none;
     display: block;
     padding: 0.5rem;
-    border-bottom: 1px solid #eae7dc;
-  
-  }
-  nav a:hover {
+    border-bottom: 1px solid #d5cbc0;
+
+}
+nav a:hover {
     font-weight: 900;
     text-decoration : var(--secondary-color) underline;
-  }
-  img {
+}
+img {
     width: 400px;
     height: 250px;
     border-radius: 4px;
     background-color: var(--primary-background);
     
-  }
-  figure, p {
+}
+figure, p {
     margin: 2px;
-  }
-  
-  .display-grid {
+}
+
+.display-grid {
     display:grid; 
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
     grid-gap: 20px;
     place-items: center;
-  }
-  .text-center {
+}
+.text-center {
     text-align: center;
-  }
-  .active {
+}
+.active {
     color: var(--secondary-color);
-  }
-  nav.show {
+}
+nav.show {
     display: grid;
-  }
-  header a {
+}
+header a {
     text-decoration: none;
-  }
-  #menu::before {
-    content: "Ã¢â€°Â¡";
+}
+#menu::before {
+    content: "≡";
     color: white;
     font-size: 2rem;
-  }
-  #menu.show::before {
-  content: "X";
+}
+#menu.show::before {
+	content: "X";
     color: white;
     font-size: 1.5rem;
-  }
-  .card {
-    --card-border:0.1rem solid #ffffff;
+}
+.card {
+    --card-border:0.1rem solid #96826b;
     --card-border-radius: 5px;
-    background-color: #c0b283 (212, 212, 212);
+    background-color: #f2e3d3(212, 212, 212);
     border: var(--card-border) ;
-    border-radius: var(--card-bordexr-radius);
+    border-radius: var(--card-border-radius);
     position: relative;
-    box-shadow: 0 4px 8px 0 #a78b6d(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .card-body {
+    box-shadow: 0 4px 8px 0 #f2e3d3(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-body {
     padding: 10px;
     flex-wrap: wrap;
-  }
+}
