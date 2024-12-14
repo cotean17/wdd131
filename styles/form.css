@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #F4F4F9; 
+    color: #22223B;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #22223B; 
+    font-size: 2.5em;
+    background-color: #C9ADA7; 
+    font-family: "Roboto", sans-serif;
+    width: 95%;
+    padding: 10px;
+    margin: 20px;
+}
+
+form {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #9A8C98; 
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #4A4E69; 
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+}
+
+fieldset {
+    border: none;
+}
+
+div {
+    color: #4A4E69;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.feature {
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #6A4C93; 
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #22223B; 
+    background-color: #FFFFFF; 
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 10px;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: #6A4C93;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #4A4E69; 
+    color: #FFFFFF;
+}
+
+footer {
+    background-color: #C9ADA7; 
+    text-align: center;
+    color: #22223B;
+    padding: 10px;
+    margin: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.review {
+    font-size: 1.5rem;
+    background-color: #C9ADA7; 
+    color: #22223B;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.review-1 {
+    font-size: 1rem;
+    color: #6A4C93;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.review-2 {
+    background-color: #C9ADA7; 
+    color: #22223B; 
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-2 {
+    margin-top: 300px;
+    font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
