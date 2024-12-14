@@ -85,7 +85,14 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #EFB11D; /* Golden yellow border for images */
+    border-radius: 5px;
+    margin: 1rem 0;
+}
 
 /* Highlighted Text */
 strong {
