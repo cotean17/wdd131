@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View our photography portfolio showcasing events, portraits, and landscapes.">
+  <title>Gallery - Photography Business</title>
+  <link rel="stylesheet" href="styles/final_project.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="final_project.html">Home</a></li>
+            <li><a href="gallery.html">Services</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="about">
+            <div class="about-container">
+                <img src="images/me.png" alt="Photographer Portrait" loading="lazy">
+
+                <div class="about-text">
+                    <h2>About Me!</h2>
+                    <p>I'm very glad you stopped by! My name is María José but go by Cote.</p>
+                    <p>
+                        Photography has been something I have really enjoyed since before I can remember. 
+                        When I was in my country, Chile, I took a photography course in 2017 and after that 
+                        course I began studying however I could. I also enjoy landscape and light painting 
+                        photography so much but just as a hobby. 
+                    </p>
+                    <p>My goal is create with you and help you, especially women to feel confident, 
+                        empowered and to be able to be yourself in front of the camera.
+                    </p>
+                    <p> Besided doing photography I love spending time with my family. 
+                        I'm married to my lovely sweet husband and we have our sweet baby girl</p>
+                    <p>I enjoy getting to know different love stories and you literally 
+                        don't need any excuse to capture a time of your life with the ones 
+                        you love. So let's get in touch! 
+                    </p>
+                </div>
+                <div class="gallery-grid">
+                <img src="images/IMG_0242.JPG" alt="My baby girl and me " loading="lazy">
+                <img src="images/IMG_0263.JPG" alt="My husband and my baby" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Photography Studio. All rights reserved.</p>
+        <p><a href="attributions.html">Attributions</a></p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        // Dynamic footer content
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

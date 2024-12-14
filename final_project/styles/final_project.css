@@ -38,6 +38,11 @@ body {
     gap: 1.5rem;
   }
   img {
+    width: 100%; /* Makes image responsive */
+    max-width: 500px; /* Limits the max size */
+    height: auto; /* Maintains the aspect ratio */
+}
+  img .about-container {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
