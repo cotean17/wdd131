@@ -3,54 +3,83 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-  }
-  header {
-    background: #D2B48C;
-    color: #fff;
+    background-color: #EBE9E1; /* Soft background color */
+    color: #000; /* Default text color for readability */
+}
+
+header {
+    background: #E43D12; /* Vibrant heading background */
+    color: #fff; /* Contrast text color */
     padding: 1.5rem;
-  }
-  .nav-menu {
+}
+
+.nav-menu {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-  }
-  .nav-menu li {
+}
+
+.nav-menu li {
     margin: 0 1rem;
-  }
-  .nav-menu a {
-    color: #fff;
+}
+
+.nav-menu a {
+    color: #D6536D; /* Accent color for links */
     text-decoration: none;
-  }
-  html, body {
+}
+
+html, body {
     height: 100%; /* Ensure the height of html and body stretches to the full viewport */
     margin: 0;
     display: flex;
     flex-direction: column;
-  }
-  main {
+}
+
+main {
     padding: 2rem;
     flex: 1;
-  }
-  .gallery-grid {
+}
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-  }
-  img {
+}
+
+img {
     width: 100%; /* Makes image responsive */
     max-width: 500px; /* Limits the max size */
     height: auto; /* Maintains the aspect ratio */
 }
-  img .about-container {
+
+img .about-container {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-  }
-  footer {
+}
+
+footer {
     text-align: center;
-    background: #D2B48C;
+    background: #E43D12; /* Footer matches header */
     color: #fff;
     padding: 1rem 0;
-  }
-  
+}
+
+/* Additional accents */
+button, .btn {
+    background-color: #D6536D; /* Button background */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background-color: #FFA2B6; /* Light pink highlight on hover */
+}
+
+.highlight {
+    color: #EFB11D; /* Golden highlight for emphasis */
+}
