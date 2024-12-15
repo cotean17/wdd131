@@ -1,68 +1,61 @@
-const currentyear = document.querySelector("#currentyear");
-
-const lastModified = document.querySelector("#lastModified");
+// Footer: Current Year and Last Modified Date
+const currentYearElement = document.querySelector("#currentyear");
+const lastModifiedElement = document.querySelector("#lastModified");
 
 const today = new Date();
+currentYearElement.textContent = today.getFullYear();
+lastModifiedElement.textContent = document.lastModified;
 
-currentyear.innerHTML = today.getFullYear();
-
-lastModified.innerHTML = document.lastModified;
-
+// Product Array
 const products = [
-    {
-      id: "fc-1888",
-      name: "flux capacitor",
-      averagerating: 4.5
-    },
-    {
-      id: "fc-2050",
-      name: "power laces",
-      averagerating: 4.7
-    },
-    {
-      id: "fs-1987",
-      name: "time circuits",
-      averagerating: 3.5
-    },
-    {
-      id: "ac-2000",
-      name: "low voltage reactor",
-      averagerating: 3.9
-    },
-    {
-      id: "jj-1969",
-      name: "warp equalizer",
-      averagerating: 5.0
-    }
-  ];
-  
+    { id: "fc-1888", name: "Flux Capacitor", averagerating: 4.5 },
+    { id: "fc-2050", name: "Power Laces", averagerating: 4.7 },
+    { id: "fs-1987", name: "Time Circuits", averagerating: 3.5 },
+    { id: "ac-2000", name: "Low Voltage Reactor", averagerating: 3.9 },
+    { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 }
+];
 
-  function populateProductOptions() {
+// Populate Product Options in Select Field
+function populateProductOptions() {
     const selectElement = document.getElementById('product-name');
-  
     
+    // Add placeholder option
+    const placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = 'Select a Product...';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    selectElement.appendChild(placeholder);
+
+    // Populate with products
     products.forEach(product => {
-      const option = document.createElement('option');
-      option.value = product.id; 
-      option.textContent = product.name; 
-      selectElement.appendChild(option);
+        const option = document.createElement('option');
+        option.value = product.id; // Use product ID as value
+        option.textContent = product.name; // Display product name
+        selectElement.appendChild(option);
     });
-  }
-  
-    function updateReviewCount() {
-    const reviewCount = localStorage.getItem('reviewCount') || 0;
-    localStorage.setItem('reviewCount', parseInt(reviewCount) + 1); 
+}
+
+// Update Review Count Using localStorage
+function updateReviewCount() {
+    let reviewCount = localStorage.getItem('reviewCount');
+    reviewCount = reviewCount ? parseInt(reviewCount) : 0; // Ensure it’s a number
+
+    reviewCount += 1; // Increment count
+    localStorage.setItem('reviewCount', reviewCount); // Save to localStorage
+
     const reviewCounter = document.getElementById('review-count');
-    reviewCounter.textContent = `Total reviews submitted: ${localStorage.getItem('reviewCount')}`;
-  }
-  
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    populateProductOptions();
-    
-    if (window.location.pathname.includes('review.html')) {
-      updateReviewCount();
+    if (reviewCounter) {
+        reviewCounter.textContent = `Total reviews submitted: ${reviewCount}`;
     }
-  });
-  
+}
+
+// DOMContentLoaded Handler
+document.addEventListener('DOMContentLoaded', () => {
+    populateProductOptions();
+
+    // Only update review count if on the confirmation page
+    if (window.location.pathname.includes('review.html')) {
+        updateReviewCount();
+    }
+});
